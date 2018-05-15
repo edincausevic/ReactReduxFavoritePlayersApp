@@ -33,7 +33,7 @@ class List1 extends Component {
   
   renderPlayers = () => { 
     const { players, playerSelected } = this.props;
-   
+    console.log(this.props)
     if(players.length > 0) {
       
       return players.map(player => {
@@ -68,8 +68,7 @@ const mapStateToProps = (state) => ({
   players: state.playersData.players,
   numOfAllPlayers: state.playersData.numOfAllPlayers,
   playerSelected: state.playersData.playerSelected,
-  listLimit: state.playersData.listLimit,
-  showModal
+  listLimit: state.playersData.listLimit
 })
 
 export default connect(mapStateToProps, { cahangeListLimit, selectPlayer, showModal })(List1);

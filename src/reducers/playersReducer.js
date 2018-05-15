@@ -45,7 +45,7 @@ export default function(state = initialState, action) {
     
     case GET_MORE_PLAYERS:
       const newLimit = state.listLimit + state.listIncrement;
-      const newPlayers = state.allPlayers.forEach((player, i) => {
+      const newPlayers = state.allPlayers.filter((player, i) => {
         if (i < newLimit) {
           return player;
         }
